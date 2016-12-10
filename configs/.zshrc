@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/stevenreilly/.oh-my-zsh
+export ZSH=~/.oh-my-zsh
 
 export DEFAULT_USER=stvnrlly
 
