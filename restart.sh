@@ -28,9 +28,13 @@ source ./install/gem.sh
 ## iTerm2
 ### settings
 ### colors
-## zsh
 ## oh my zsh
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+## zsh
+ln -s $(pwd)/configs/.zshrc ~/.zshrc
 ## custom prompt
+mkdir ~/.oh-my-zsh/custom/themes
+ln -s $(pwd)/configs/cloud.zsh-theme ~/.oh-my-zsh/custom/themes/cloud.zsh-theme 
 
 # Set up text editor
 ## Atom
