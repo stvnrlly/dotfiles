@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-utils = (
+utils=(
   bundler
   t
 )

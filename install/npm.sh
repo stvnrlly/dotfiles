@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-utils = (
+utils=(
   pa11y
   pa11y-reporter-1.0-json
   pageres-cli

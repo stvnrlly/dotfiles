@@ -1,9 +1,10 @@
 
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew tap homebrew/versions
+brew tap homebrew/command-not-found
 brew tap caskroom/fonts
 
-basics = (
+basics=(
   git
   zsh
   zsh-completions
@@ -47,11 +48,11 @@ basics = (
   syncthing
 )
 
-docker = (
+docker=(
 
 )
 
-apps = (
+apps=(
   atom
   firefox
   iterm2
@@ -59,7 +60,7 @@ apps = (
   slack
 )
 
-fonts = (
+fonts=(
   font-input
   font-hack
 )

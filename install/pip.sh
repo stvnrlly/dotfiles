@@ -1,6 +1,6 @@
 #! /usr/bin/env bash
 
-utils = (
+utils=(
   ipython
   pip-tools
   csvkit
