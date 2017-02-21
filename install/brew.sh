@@ -3,6 +3,7 @@
 brew tap homebrew/versions
 brew tap homebrew/command-not-found
 brew tap caskroom/fonts
+brew tap thefox/brewery # for cmus-control
 
 basics=(
   git
@@ -46,6 +47,7 @@ basics=(
   t-completion
   exercism
   syncthing
+  cmus-control
 )
 
 docker=(
