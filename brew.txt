@@ -1,0 +1,11 @@
+cmus
+git
+nvm
+pandoc
+pipenv
+pipx
+pyenv
+starship
+tldr
+zsh-history-substring-search
+zsh-syntax-highlighting
