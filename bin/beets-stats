@@ -1,0 +1,9 @@
+#!/bin/bash
+
+HERE=$(dirname "$0")
+
+beet stats > $HERE/../data/stats
+beet stats format:FLAC > $HERE/../data/flac_stats
+beet stats format:MP3 > $HERE/../data/mp3_stats
+beet missing -c > $HERE/../data/missing
+

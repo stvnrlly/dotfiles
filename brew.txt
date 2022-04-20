@@ -6,6 +6,8 @@ pipenv
 pipx
 pyenv
 starship
+tree
 tldr
+wget
 zsh-history-substring-search
 zsh-syntax-highlighting

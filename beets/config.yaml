@@ -1,0 +1,68 @@
+directory: /Volumes/music
+library: ~/.config/beets/musiclibrary.db
+per_disc_numbering: yes
+
+###################
+# occasionally, run 
+# ❯ beet mod albumartist_sort='' artist_sort=''
+# to keep stuff purely alphabetical in cmus
+
+paths:
+  default: $albumartist/$album%aunique{}/$disc-$track $title
+
+plugins: 
+  - convert
+  # - describe
+  - discogs
+  - duplicates
+  # - edit
+  - fetchart
+  - ftintitle
+  - importreplace
+  - info
+  - mbsubmit
+  - missing
+  - random
+  # - scrub
+  # - summarize
+
+bandcamp:
+  include_digital_only_tracks: true
+  preferred_media: Vinyl,Cassette,Digital,CD
+
+convert:
+  formats:
+    flac: ffmpeg -i "$source" -af aformat=s32:176000 "$dest"
+
+discogs:
+  index_tracks: yes
+  # source_weight: 0.2
+
+fetchart:
+  high_resolution: yes
+  max_filesize: 85000
+  maxwidth: 1000
+  quality: 65
+
+ftintitle:
+  auto: yes
+
+import:
+  incremental: yes
+  log: ~/.config/beets/import-log.txt
+
+match:
+  preferred:
+    countries: ['US']
+    original_year: yes
+
+ui:
+  color: yes
+  colors:
+    text_success: green
+    text_warning: yellow
+    text_error: red
+    text_highlight: red
+    text_highlight_minor: lightgray
+    action_default: turquoise
+    action: blue

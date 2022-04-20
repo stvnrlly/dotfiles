@@ -1,0 +1,15 @@
+#!/bin/bash
+
+cd ~/dev/dotfiles/
+
+# although tmux new-session -A switches to attaching,
+# it doesn't prevent the split-window commands, so stuff 
+# gets increasingly messed up
+if cmus-remote -Q 2>/dev/null 1>&2 ; then
+    tmux attach-session -t cmus
+else
+    tmux new-session -A -D -s cmus cmus \; \
+    split-window -p 30 -h poetry run python cmus/cmus_buddy.py \; \
+    split-window -p 30 -v poetry run python cmus/beets_buddy.py \; \
+    select-pane -t 0
+fi
